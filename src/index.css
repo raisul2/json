@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: rgb(6, 2, 46);
+    
+}
+
+h1{
+
+    text-transform: capitalize;
+}
+
+button{
+    padding: 10px;
+    width: 100px;
+    text-transform: capitalize;
+    background-color: aliceblue;
+     border-radius: 10px;
+}
+
+
+
+
+.navbar{
+    
+    background-color: gainsboro;
+     border-bottom: 1px solid ;
+     box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.23);
+    
+
+}
+
+.navbar a{
+    display: inline-block;
+    padding: 10px;
+     background-color: darkcyan;
+      border-radius: 10px;
+      margin: 10px;
+      color: white;
+      text-decoration: none;
+}
+
+.main{
+  
+}
+
+.main .displayuser{
+    margin-top: 50px;
+    overflow: auto;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: gainsboro;
+}
+
+.main .displayuser .box{
+background-color: white;
+    margin:auto;
+    height: 200px;
+    text-align: center;
+    font-size: 10px;
+    width: 50%;
+     box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.204);
+     border-radius: 10px;
+
+}

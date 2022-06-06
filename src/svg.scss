@@ -1,0 +1,229 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+    svg{
+        
+        width: 100%;
+
+        #bg{
+            animation: changecolor 3s infinite alternate;
+        }
+       
+        #ball{
+            animation: bounce 1s  infinite ease-in alternate;
+        }
+
+        #show{
+            animation: rotate 2s infinite ease-in-out alternate;
+            transform-origin: right;
+            transform-box: fill-box;
+        }
+        #righthand{
+            transform-origin: right;
+            transform-box: fill-box;
+        }
+
+    
+    }
+
+    .wev{
+        background-color: tomato;
+        height: 100vh; 
+        position: relative;
+      
+       
+        svg{
+            bottom: 0;
+            position: absolute;
+     
+            overflow: hidden;
+        
+          #id{
+              fill: white;
+              stroke-width: var(--segment-fill-stroke-width);
+          }
+        }
+    }
+
+    @keyframes wev {
+          0%{
+              transform: translateX(0);
+          }
+          100%{
+              transform: translateX(-10%);
+          }
+    }
+
+
+    .lo{
+        height: 100vh;
+    }
+
+    .love{
+ height: 100vh;
+ background-color: darkblue;
+ svg{
+     margin-top: 200px;
+
+     text{
+         fill: transparent;
+         text-anchor: middle;
+         font-size: 100px;
+         font-weight: 700;
+         stroke-width: 5;
+         stroke: white;
+          text-transform: uppercase;
+         animation: textanimate 5s  linear infinite alternate-reverse;
+     }
+    
+ }
+        
+    }
+
+
+    .text{
+        #text{
+            height: 40vw;
+            width: 50vw;
+            stroke-dasharray: 3500;
+            stroke-dashoffset: 500;
+            animation: 5s  fillsvg linear infinite alternate ;
+        }
+    }
+
+    .wrp{
+   
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          justify-content: center;
+          align-items: center;
+
+        
+        .box{
+            height: 400px;
+            width: 80%;
+            background-color: red;
+            border-radius: 20px;
+
+             font-size: 5em;
+             text-align: center;
+             color: white;
+            
+        }
+    }
+
+    @keyframes fillsvg {
+           
+        0%{
+            stroke-dashoffset: 3500;
+
+        }
+
+        100%{
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes textanimate {
+           0%{
+
+            stroke-dasharray: 0 50%;
+            stroke-dashoffset: 20%;
+             
+        }
+        100%{
+            stroke-dasharray:  50% 0 ;
+            stroke-dashoffset: -20%;
+        
+            
+           }
+    }
+
+
+    [data-aos="new-animation"] {
+        opacity: 0;
+        transition-property: transform, opacity;
+      
+        &.aos-animate {
+          opacity: 1;
+        }
+      
+        @media screen and (min-width: 768px) {
+          transform: translateX(100px);
+      
+          &.aos-animate {
+            transform: translateX(0);
+          }
+        }
+      }
+
+      @keyframes love {
+          0%{
+              stroke-dashoffset: 0;
+            }
+            
+            40%{
+                
+                stroke-dashoffset: 100;
+          }
+      
+        }
+
+
+     @keyframes rotate {
+              10%{
+                transform: rotate(10deg);
+              }
+              70%{
+                  transform: rotate(-5deg);
+              }
+     }
+
+
+     @keyframes rotatehand  {
+              0%{
+                transform: rotate(-5deg);
+              }
+              70%{
+                  transform: rotate(10deg);
+              }
+     }
+
+
+
+
+
+
+
+   
+
+    
+
+
+
+@keyframes changecolor {
+    
+       0%{
+           fill: red;
+       }
+
+       100%{
+           fill: blue;
+       }
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-150px);
+    }
+}
